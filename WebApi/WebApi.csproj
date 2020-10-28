@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\old\**" />
+    <Compile Remove="Models\old\**" />
+    <Content Remove="Controllers\old\**" />
+    <Content Remove="Models\old\**" />
+    <EmbeddedResource Remove="Controllers\old\**" />
+    <EmbeddedResource Remove="Models\old\**" />
+    <None Remove="Controllers\old\**" />
+    <None Remove="Models\old\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\JobOrdersController.cs" />
+    <Compile Remove="Migrations\20190917061233_DBNw.cs" />
+    <Compile Remove="Migrations\20190917061233_DBNw.Designer.cs" />
+    <Compile Remove="Migrations\20190917061308_DBNew.cs" />
+    <Compile Remove="Migrations\20190917061308_DBNew.Designer.cs" />
+    <Compile Remove="Migrations\20190917091209_DbNewUpdated.cs" />
+    <Compile Remove="Migrations\20190917091209_DbNewUpdated.Designer.cs" />
+    <Compile Remove="Migrations\20190917091649_dbnw4.cs" />
+    <Compile Remove="Migrations\20190917091649_dbnw4.Designer.cs" />
+    <Compile Remove="Migrations\20190917091808_db.cs" />
+    <Compile Remove="Migrations\20190917091808_db.Designer.cs" />
+    <Compile Remove="Migrations\20190917091839_db7.cs" />
+    <Compile Remove="Migrations\20190917091839_db7.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EFCore.BulkExtensions" Version="2.6.3" />
+    <PackageReference Include="Ical.Net" Version="4.1.11" />
+    <PackageReference Include="MailKit" Version="2.9.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="System.Drawing.Common" Version="4.6.0" />
+    <PackageReference Include="TinyCsvParser" Version="2.5.2" />
+    <PackageReference Include="X.PagedList" Version="7.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\old\" />
+    <Folder Include="Models\Candidate\" />
+    <Folder Include="Models\old\" />
+  </ItemGroup>
+
+</Project>
