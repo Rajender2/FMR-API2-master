@@ -13,7 +13,6 @@ namespace WebApi.Models
         [Required]
         [StringLength(450)]
         public string Name { get; set; }
-
         public int Countryid { get; set; }
         public virtual Country Country { get; set; }
     }
